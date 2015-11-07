@@ -1,10 +1,6 @@
 var app = angular.module('mr-handyman', []);
 
-app.controller('HandymanController', ['$scope', '$http', function($scope, $http) {
-  function init() {
-    $scope.search();
-  }
-  
+app.controller('MainController', ['$scope', '$http', function($scope, $http) {
   $scope.search = function() {
     var queryFilter = $scope.queryFilter || "";
 
@@ -13,5 +9,8 @@ app.controller('HandymanController', ['$scope', '$http', function($scope, $http)
     });
   }
 
-  init();
+  $scope.search();
+}]);
+
+app.controller('RatingController', ['$scope', '$http', function($scope, $http) {
 }]);
