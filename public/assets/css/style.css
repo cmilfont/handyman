@@ -511,6 +511,7 @@ header {
       text-transform: uppercase; }
 
 #handyman-list .handyman-item {
+  position: relative;
   float: left;
   padding: 10px 2.5%;
   width: 100%;
@@ -519,6 +520,7 @@ header {
   box-sizing: border-box; }
 
 .handyman-item h2 {
+  position: relative;
   float: left;
   margin: 0 5%;
   padding: 0;
@@ -536,13 +538,27 @@ header {
   margin: 0 5%;
   width: 70%; }
   .handyman-item .handyman-item-skills .handyman-item-skills-desc {
-    padding: 2px;
+    padding: 0 2px;
     margin: 0 0 0 2%;
-    font-size: 14px;
+    font-size: 13px;
     border: 1px solid #cecece;
     color: #757575;
     background: #f1f1f1;
     border-radius: 5px; }
+    .handyman-item .handyman-item-skills .handyman-item-skills-desc:first-child {
+      margin-left: 0; }
+.handyman-item .handyman-item-rating {
+  position: absolute;
+  top: 10px;
+  right: 5%;
+  width: 25%; }
+  .handyman-item .handyman-item-rating .handyman-item-rating-bar {
+    float: right;
+    padding: 1px;
+    font-size: 13px;
+    text-align: center;
+    color: #5b5b5b;
+    background: #8de0ed; }
 
 .row {
   max-width: 95%;

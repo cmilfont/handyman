@@ -24,7 +24,9 @@
             <img src="http://placehold.it/60x60" class="handyman-item-avatar">
             <h2>{{handyman.name}}</h2>
             <div class="handyman-item-rating">
-                <div class="handyman-item-rating-bar" style="width: {{handyman.rating}}%"></div>
+                <div class="handyman-item-rating-bar" style="width: {{handyman.rating}}%">
+                  {{handyman.rating}}%
+                </div>
             </div>
             <div class="handyman-item-skills">
                 <span class="handyman-item-skills-desc" ng-repeat="skill in handyman.skills">{{skill}}</span>
@@ -36,13 +38,13 @@
 <section id="rate" ng-controller="RatingController">
     <main id="add-rating">
         <h1>Rate a Handyman</h1>
-        <label> Handyman's name: 
+        <label> Handyman's name:
             <input type="text" ng-model="name" />
         </label>
-        <label> Phone: 
+        <label> Phone:
             <input type="text" ng-model="phone" />
         </label>
-        <label> Skills: 
+        <label> Skills:
             <input type="text" ng-model="skills" />
         </label>
         <label>Do you recommend?</label>
