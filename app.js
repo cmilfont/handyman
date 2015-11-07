@@ -5,6 +5,10 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+require( './api/database.js' )();
+
+global.Handymans = require('./api/handymans');
+
 var routes = require('./routes/index');
 
 var app = express();
