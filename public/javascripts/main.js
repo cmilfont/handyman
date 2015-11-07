@@ -1,7 +1,17 @@
 var app = angular.module('mr-handyman', []);
 
 app.controller('HandymanController', ['$scope', '$http', function($scope, $http) {
-  $http.get('/handymans').then(function(response) {
-    $scope.handymanList = response.data;
-  });
+  function init() {
+    $scope.search();
+  }
+  
+  $scope.search = function() {
+    var queryFilter = $scope.queryFilter || "";
+
+    $http.get('/handymans?filter='+queryFilter).then(function(response) {
+      $scope.handymanList = response.data;
+    });
+  }
+
+  init();
 }]);

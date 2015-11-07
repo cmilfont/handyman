@@ -14,7 +14,7 @@
 
 <header>
   <div class="row">
-    <input type="text" name="filter" placeholder="Filter by skills" />
+      <input type="text" placeholder="Filter by skills" ng-model="queryFilter" ng-change="search()" ng-model-options='{ debounce: 1000 }' autofocus />
   </div>
 </header>
 
