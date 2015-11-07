@@ -12,26 +12,29 @@
 </head>
 <body ng-controller="HandymanController">
 
-<header>
-  <div class="row">
-      <input type="text" placeholder="Filter by skills" ng-model="queryFilter" ng-change="search()" ng-model-options='{ debounce: 1000 }' autofocus />
-  </div>
-</header>
+<section id="index">
+    <header>
+        <div class="row">
+            <input type="text" placeholder="Filter by skills" ng-model="queryFilter" ng-change="search()" ng-model-options='{ debounce: 1000 }' autofocus />
+        </div>
+    </header>
 
-<main>
-  <section id="handyman-list">
-      <div class="handyman-item" ng-repeat="handyman in handymanList">
-          <img src="http://placehold.it/60x60" class="handyman-item-avatar">
-          <h2>{{handyman.name}}</h2>
-          <div class="handyman-item-rating">
-              <div class="handyman-item-rating-bar" style="width: {{handyman.rating}}%"></div>
-          </div>
-          <div class="handyman-item-skills">
-              <span class="handyman-item-skills-desc" ng-repeat="skill in handyman.skills">{{skill}}</span>
-          </div>
-      </div>
-  </section>
-</main>
+    <main id="handyman-list">
+        <div class="handyman-item" ng-repeat="handyman in handymanList">
+            <img src="http://placehold.it/60x60" class="handyman-item-avatar">
+            <h2>{{handyman.name}}</h2>
+            <div class="handyman-item-rating">
+                <div class="handyman-item-rating-bar" style="width: {{handyman.rating}}%"></div>
+            </div>
+            <div class="handyman-item-skills">
+                <span class="handyman-item-skills-desc" ng-repeat="skill in handyman.skills">{{skill}}</span>
+            </div>
+        </div>
+    </main>
+</section>
+
+<section id="rate">
+</section>
 
 </body>
 </html>
