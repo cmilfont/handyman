@@ -560,6 +560,63 @@ header {
     color: #5b5b5b;
     background: #8de0ed; }
 
+#add-rating {
+  float: left;
+  background: #FFF; }
+  #add-rating h1 {
+    padding: 5px 0;
+    margin: 0 0 10px 0;
+    font-size: 25px;
+    font-weight: normal;
+    color: #1EACC3;
+    border-bottom: 1px solid #e7e7e7; }
+  #add-rating label {
+    float: left;
+    margin: 10px 0;
+    width: 100%;
+    color: #757575; }
+    #add-rating label:nth-last-of-type {
+      margin-top: 0; }
+    #add-rating label.label-radio {
+      width: 20%;
+      margin: 15px 3%;
+      line-height: 30px; }
+      #add-rating label.label-radio.recommend {
+        width: auto;
+        margin-left: 0; }
+      #add-rating label.label-radio input[type=radio] {
+        float: left;
+        margin: 0 5%;
+        width: 30px;
+        height: 30px;
+        background: #F4F4F4;
+        border-radius: 50%;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        transition: background 0.2s ease; }
+        #add-rating label.label-radio input[type=radio]:checked {
+          background: #1EACC3; }
+    #add-rating label input {
+      display: block;
+      padding: 10px;
+      margin: 5px 0 0 0;
+      width: 100%;
+      outline: none;
+      border: 1px solid #e7e7e7;
+      box-sizing: border-box;
+      border-radius: 5px; }
+  #add-rating button {
+    float: right;
+    margin: 20px 0;
+    padding: 12px 40px;
+    border: none;
+    color: #FFF;
+    background: #1EACC3;
+    border-radius: 5px;
+    transition: background 0.2s ease; }
+    #add-rating button:hover {
+      background: #21bfd9; }
+
 .row {
   max-width: 95%;
   margin: auto; }
