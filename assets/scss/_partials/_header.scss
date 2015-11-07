@@ -13,9 +13,11 @@ header {
     border: none;
     outline: none;
     font-size: 14px;
-    text-transform: uppercase;
     color: darken($gray, 50%);
     box-sizing: border-box;
     border-radius: 5px;
+
+    &::-webkit-input-placeholder { text-transform: uppercase; }
+    &::-moz-placeholder { text-transform: uppercase; }
   }
 }

@@ -502,19 +502,21 @@ header {
     border: none;
     outline: none;
     font-size: 14px;
-    text-transform: uppercase;
     color: #757575;
     box-sizing: border-box;
     border-radius: 5px; }
+    header input::-webkit-input-placeholder {
+      text-transform: uppercase; }
+    header input::-moz-placeholder {
+      text-transform: uppercase; }
 
 #handyman-list .handyman-item {
   float: left;
   padding: 10px 2.5%;
   width: 100%;
   border-bottom: 1px solid #e7e7e7;
+  background: #FFF;
   box-sizing: border-box; }
-  #handyman-list .handyman-item:nth-child(2n) {
-    background: #FFF; }
 
 .handyman-item h2 {
   float: left;
@@ -531,13 +533,16 @@ header {
   border-radius: 50%; }
 .handyman-item .handyman-item-skills {
   float: left;
-  padding: 2px;
-  margin: 0 0 0 2%;
-  font-size: 14px;
-  border: 1px solid #c1c1c1;
-  color: #c1c1c1;
-  background: #e7e7e7;
-  border-radius: 5px; }
+  margin: 0 5%;
+  width: 70%; }
+  .handyman-item .handyman-item-skills .handyman-item-skills-desc {
+    padding: 2px;
+    margin: 0 0 0 2%;
+    font-size: 14px;
+    border: 1px solid #cecece;
+    color: #757575;
+    background: #f1f1f1;
+    border-radius: 5px; }
 
 .row {
   max-width: 95%;

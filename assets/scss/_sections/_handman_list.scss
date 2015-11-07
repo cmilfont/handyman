@@ -4,9 +4,8 @@
     padding: 10px 2.5%;
     width: 100%;
     border-bottom: 1px solid darken($gray, 5%);
+    background: #FFF;
     box-sizing: border-box;
-
-    &:nth-child(2n) { background: #FFF; }
   }
 }
 
@@ -30,12 +29,17 @@
 
   .handyman-item-skills {
     float: left;
-    padding: 2px;
-    margin: 0 0 0 2%;
-    font-size: 14px;
-    border: 1px solid darken($gray, 20%);
-    color: darken($gray, 20%);
-    background: darken($gray, 5%);
-    border-radius: 5px;
+    margin: 0 5%;
+    width: 70%;
+
+    .handyman-item-skills-desc {
+      padding: 2px;
+      margin: 0 0 0 2%;
+      font-size: 14px;
+      border: 1px solid darken($gray, 15%);
+      color: darken($gray, 50%);
+      background: darken($gray, 1%);
+      border-radius: 5px;
+    }
   }
 }
