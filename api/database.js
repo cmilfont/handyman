@@ -22,8 +22,16 @@ module.exports = function(tomcat) {
       }), 'userRecord');
       
       global.HandymanRecord = database.model('handymanRecord', new mongoose.Schema({
-        phone: String,
-        names: [String],
+        phone: {
+          required: true,
+          notEmpty: true,
+          type: String
+        },
+        names: [{
+          required: true,
+          notEmpty: true,
+          type: String
+        }],
         createdAt: { type: Date, default: Date.now }
       }), 'handymanRecord');
       
@@ -32,8 +40,8 @@ module.exports = function(tomcat) {
         createdAt: { type: Date, default: Date.now },
         updatedAt: { type: Date, default: Date.now },
         recommended: Boolean,
-        handyman  : { type: ObjectId, ref: 'HandymanRecord' },
-        user  : { type: ObjectId, ref: 'userRecord' }
+        handyman  : { type: mongoose.Schema.Types.ObjectId, ref: 'HandymanRecord' },
+        user  : { type: mongoose.Schema.Types.ObjectId, ref: 'userRecord' }
         
       }), 'ratingRecord');
 
@@ -42,3 +50,11 @@ module.exports = function(tomcat) {
   }
   
 };
+
+/*
+
+require( './api/database.js' )();
+ze = new HandymanRecord({phone: "55085981063769", names: ["Christiano", "Milfont"]})
+ze.save()
+
+*/
