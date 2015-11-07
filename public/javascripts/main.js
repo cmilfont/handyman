@@ -13,4 +13,15 @@ app.controller('MainController', ['$scope', '$http', function($scope, $http) {
 }]);
 
 app.controller('RatingController', ['$scope', '$http', function($scope, $http) {
+  $scope.rate = function() {
+    var data = {
+      name: $scope.name,
+      phone: $scope.phone,
+      skills: $scope.skills,
+      recommend: $scope.recommend
+    }
+
+    $http.post('/rating', data).then(function(response) {
+    });
+  }
 }]);
