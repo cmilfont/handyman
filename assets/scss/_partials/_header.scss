@@ -1,0 +1,21 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 0;
+  background: $primary;
+
+  input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: darken($gray, 50%);
+    box-sizing: border-box;
+    border-radius: 5px;
+  }
+}

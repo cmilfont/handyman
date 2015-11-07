@@ -1,0 +1,41 @@
+#handyman-list {
+  .handyman-item {
+    float: left;
+    padding: 10px 2.5%;
+    width: 100%;
+    border-bottom: 1px solid darken($gray, 5%);
+    box-sizing: border-box;
+
+    &:nth-child(2n) { background: #FFF; }
+  }
+}
+
+.handyman-item {
+  h2 {
+    float: left;
+    margin: 0 5%;
+    padding: 0;
+    width: 65%;
+    font-weight: normal;
+    font-size: 20px;
+    color: darken($gray, 50%);
+    box-sizing: border-box;
+  }
+
+  .handyman-item-avatar {
+    float: left;
+    border: 1px solid darken($gray, 20%);
+    border-radius: 50%;
+  }
+
+  .handyman-item-skills {
+    float: left;
+    padding: 2px;
+    margin: 0 0 0 2%;
+    font-size: 14px;
+    border: 1px solid darken($gray, 20%);
+    color: darken($gray, 20%);
+    background: darken($gray, 5%);
+    border-radius: 5px;
+  }
+}
