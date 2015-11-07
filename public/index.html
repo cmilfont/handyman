@@ -37,20 +37,22 @@
 
 <section id="rate" ng-controller="RatingController">
     <main id="add-rating">
-        <h1>Rate a Handyman</h1>
-        <label> Handyman's name:
-            <input type="text" ng-model="name" />
-        </label>
-        <label> Phone:
-            <input type="text" ng-model="phone" />
-        </label>
-        <label> Skills:
-            <input type="text" ng-model="skills" />
-        </label>
-        <label>Do you recommend?</label>
-        <label> Yes <input type="radio" ng-model="recommend" value="true"></label>
-        <label> No <input type="radio" ng-model="recommend" value="false"></label>
-        <button>Rate</button>
+        <div class="row">
+          <h1>Rate a Handyman</h1>
+          <label> Handyman's name:
+              <input type="text" ng-model="name" />
+          </label>
+          <label> Phone:
+              <input type="text" ng-model="phone" />
+          </label>
+          <label> Skills:
+              <input type="text" ng-model="skills" />
+          </label>
+          <label>Do you recommend?</label>
+          <label> Yes <input type="radio" ng-model="recommend" value="true"></label>
+          <label> No <input type="radio" ng-model="recommend" value="false"></label>
+          <button>Rate</button>
+        </div>
     </main>
 </section>
 
