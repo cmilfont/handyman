@@ -658,12 +658,13 @@ header input::-moz-placeholder { text-transform: uppercase; }
   transition: background 0.2s ease-out;
 }
 
-#add-rating label input:focus { background: #E4E4E4; }
+#add-rating label input:focus { background: #F7F7F7; }
 
 #add-rating button {
   float: right;
   margin: 20px 0;
   padding: 12px 40px;
+  width: 100%;
   border: none;
   color: #FFF;
   background: #1EACC3;
