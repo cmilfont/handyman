@@ -503,8 +503,11 @@ body, html {
 }
 
 main {
-  float: left;
   width: 100%;
+}
+
+#index main {
+  float: left;
   margin: 56px 0 0 0;
 }
 
@@ -694,3 +697,7 @@ header .btn-search svg {
 }
 
 #add-rating button:hover { background: #21bfd9; }
+
+/*==== Routes ====*/
+section { display: none }
+section:target { display: block }

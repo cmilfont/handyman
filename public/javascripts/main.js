@@ -1,3 +1,4 @@
+location.href = '#index';
 var app = angular.module('mr-handyman', []);
 
 app.controller('MainController', ['$scope', '$http', 'HandymanService', function($scope, $http, HandymanService) {
