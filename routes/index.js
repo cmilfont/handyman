@@ -12,7 +12,17 @@ router.get('/handymans', function(req, res, next) {
 });
 
 router.post('/rating', function(req, res) {
-  res.send('Created');
+  var newRating = {
+    recommend: JSON.parse(req.params.recommend),
+    handyman: {
+      name: req.params.name,
+      phone: req.params.phone
+    } 
+  }
+
+  Rating.create(newRating).then(function() {
+    res.send('Created');
+  });
 });
 
 module.exports = router;
