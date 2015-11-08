@@ -488,6 +488,26 @@ td,
 th {
   padding: 0; }
 
+/*==== HELPERS ====*/
+.row {
+  max-width: 95%;
+  margin: auto;
+}
+
+/*==== STYLES ====*/
+body, html {
+  width: 100%;
+  height: 100%;
+  font: 16px Arial, Helvetica, sans-serif;
+  background: #F4F4F4;
+}
+
+main {
+  float: left;
+  width: 100%;
+  margin: 56px 0 0 0;
+}
+
 header {
   position: fixed;
   top: 0;
@@ -495,22 +515,25 @@ header {
   z-index: 9999;
   width: 100%;
   padding: 10px 0;
-  background: #1EACC3; }
-  header input {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    border: none;
-    outline: none;
-    font-size: 14px;
-    color: #757575;
-    box-sizing: border-box;
-    border-radius: 5px; }
-    header input::-webkit-input-placeholder {
-      text-transform: uppercase; }
-    header input::-moz-placeholder {
-      text-transform: uppercase; }
+  background: #1EACC3;
+}
 
+header input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: #757575;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+header input::-webkit-input-placeholder { text-transform: uppercase; }
+header input::-moz-placeholder { text-transform: uppercase; }
+
+/*==== Handyman list ====*/
 #handyman-list .handyman-item {
   position: relative;
   float: left;
@@ -518,7 +541,8 @@ header {
   width: 100%;
   border-bottom: 1px solid #e7e7e7;
   background: #FFF;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 .handyman-item h2 {
   position: relative;
@@ -529,106 +553,118 @@ header {
   font-weight: normal;
   font-size: 20px;
   color: #757575;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
+
 .handyman-item .handyman-item-avatar {
   float: left;
   border: 1px solid #c1c1c1;
-  border-radius: 50%; }
+  border-radius: 50%;
+}
+
 .handyman-item .handyman-item-skills {
   float: left;
   margin: 0 5%;
-  width: 70%; }
-  .handyman-item .handyman-item-skills .handyman-item-skills-desc {
-    padding: 0 2px;
-    margin: 0 0 0 2%;
-    font-size: 13px;
-    border: 1px solid #cecece;
-    color: #757575;
-    background: #f1f1f1;
-    border-radius: 5px; }
-    .handyman-item .handyman-item-skills .handyman-item-skills-desc:first-child {
-      margin-left: 0; }
+  width: 70%;
+}
+
+.handyman-item .handyman-item-skills .handyman-item-skills-desc {
+  padding: 0 2px;
+  margin: 0 0 0 2%;
+  font-size: 13px;
+  border: 1px solid #cecece;
+  color: #757575;
+  background: #f1f1f1;
+  border-radius: 5px;
+}
+
+.handyman-item .handyman-item-skills .handyman-item-skills-desc:first-child { margin-left: 0; }
+
 .handyman-item .handyman-item-rating {
   position: absolute;
   top: 10px;
   right: 5%;
-  width: 25%; }
-  .handyman-item .handyman-item-rating .handyman-item-rating-bar {
-    float: right;
-    padding: 1px;
-    font-size: 13px;
-    text-align: center;
-    color: #5b5b5b;
-    background: #8de0ed; }
+  width: 25%;
+}
 
+.handyman-item .handyman-item-rating .handyman-item-rating-bar {
+  float: right;
+  padding: 1px;
+  font-size: 13px;
+  text-align: center;
+  color: #5b5b5b;
+  background: #8de0ed;
+}
+
+/*==== Rating ====*/
 #add-rating {
   float: left;
-  background: #FFF; }
-  #add-rating h1 {
-    padding: 5px 0;
-    margin: 0 0 10px 0;
-    font-size: 25px;
-    font-weight: normal;
-    color: #1EACC3;
-    border-bottom: 1px solid #e7e7e7; }
-  #add-rating label {
-    float: left;
-    margin: 10px 0;
-    width: 100%;
-    color: #757575; }
-    #add-rating label:nth-last-of-type {
-      margin-top: 0; }
-    #add-rating label.label-radio {
-      width: 20%;
-      margin: 15px 3%;
-      line-height: 30px; }
-      #add-rating label.label-radio.recommend {
-        width: auto;
-        margin-left: 0; }
-      #add-rating label.label-radio input[type=radio] {
-        float: left;
-        margin: 0 5%;
-        width: 30px;
-        height: 30px;
-        background: #F4F4F4;
-        border-radius: 50%;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        transition: background 0.2s ease; }
-        #add-rating label.label-radio input[type=radio]:checked {
-          background: #1EACC3; }
-    #add-rating label input {
-      display: block;
-      padding: 10px;
-      margin: 5px 0 0 0;
-      width: 100%;
-      outline: none;
-      border: 1px solid #e7e7e7;
-      box-sizing: border-box;
-      border-radius: 5px; }
-  #add-rating button {
-    float: right;
-    margin: 20px 0;
-    padding: 12px 40px;
-    border: none;
-    color: #FFF;
-    background: #1EACC3;
-    border-radius: 5px;
-    transition: background 0.2s ease; }
-    #add-rating button:hover {
-      background: #21bfd9; }
+  background: #FFF;
+}
 
-.row {
-  max-width: 95%;
-  margin: auto; }
+#add-rating h1 {
+  padding: 5px 0;
+  margin: 0 0 10px 0;
+  font-size: 25px;
+  font-weight: normal;
+  color: #1EACC3;
+  border-bottom: 1px solid #e7e7e7;
+}
 
-body, html {
-  width: 100%;
-  height: 100%;
-  font: 16px Arial, Helvetica, sans-serif;
-  background: #F4F4F4; }
-
-main {
+#add-rating label {
   float: left;
+  margin: 10px 0;
   width: 100%;
-  margin: 56px 0 0 0; }
+  color: #757575;
+}
+
+#add-rating label:nth-last-of-type { margin-top: 0; }
+
+#add-rating label.label-radio {
+  width: 20%;
+  margin: 15px 3%;
+  line-height: 30px;
+}
+
+#add-rating label.label-radio.recommend {
+  width: auto;
+  margin-left: 0;
+}
+
+#add-rating label.label-radio input[type=radio] {
+  float: left;
+  margin: 0 5%;
+  width: 30px;
+  height: 30px;
+  background: #F4F4F4;
+  border-radius: 50%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  transition: background 0.2s ease;
+}
+
+#add-rating label.label-radio input[type=radio]:checked { background: #1EACC3; }
+
+#add-rating label input {
+  display: block;
+  padding: 10px;
+  margin: 5px 0 0 0;
+  width: 100%;
+  outline: none;
+  border: 1px solid #e7e7e7;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+#add-rating button {
+  float: right;
+  margin: 20px 0;
+  padding: 12px 40px;
+  border: none;
+  color: #FFF;
+  background: #1EACC3;
+  border-radius: 5px;
+  transition: background 0.2s ease;
+}
+
+#add-rating button:hover { background: #21bfd9; }
