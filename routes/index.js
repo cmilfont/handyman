@@ -1,3 +1,4 @@
+var models  = require('../models');
 var express = require('express');
 var router = express.Router();
 
@@ -13,14 +14,14 @@ router.get('/handymans', function(req, res, next) {
 
 router.post('/rating', function(req, res) {
   var newRating = {
-    recommend: JSON.parse(req.params.recommend),
+    recommend: req.params.recommend,
     handyman: {
       name: req.params.name,
       phone: req.params.phone
     } 
   }
 
-  Rating.create(newRating).then(function() {
+  models.Rating.create(newRating).then(function() {
     res.send('Created');
   });
 });
