@@ -8,7 +8,11 @@ router.get('/handymans', function(req, res, next) {
     { name: 'Milfont Faz tudo', rating: 20, skills: ['painter', 'masom', 'brogramer'] }
   ];
 
-  return res.json(handymanList);
+  res.json(handymanList);
+});
+
+router.post('/rating', function(req, res) {
+  res.send('Created');
 });
 
 module.exports = router;

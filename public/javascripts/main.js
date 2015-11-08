@@ -9,6 +9,10 @@ app.controller('MainController', ['$scope', '$http', 'HandymanService', function
     });
   }
 
+  $scope.goRatingScreen = function() {
+    location.href = '#rate';
+  }
+
   $scope.search();
 }]);
 
@@ -22,8 +26,10 @@ app.controller('RatingController', ['$scope', '$http', 'HandymanService', functi
     };
 
     HandymanService.addRating(data).then(function(response) {
+      location.href = '/';
       // Add a new rating!
     });
+
   }
 }]);
 
