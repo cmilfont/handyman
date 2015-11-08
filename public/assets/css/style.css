@@ -700,4 +700,6 @@ header .btn-search svg {
 
 /*==== Routes ====*/
 section { display: none }
+section#index { display: block }
 section:target { display: block }
+section:target ~ section { display: none !important }

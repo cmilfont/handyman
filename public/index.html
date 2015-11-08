@@ -13,6 +13,27 @@
 </head>
 <body>
 
+<section id="rate" ng-controller="RatingController">
+    <main id="add-rating">
+        <div class="row">
+          <h1>Rate a Handyman</h1>
+          <label> Handyman's name:
+              <input type="text" ng-model="name" />
+          </label>
+          <label> Phone:
+              <input type="text" ng-model="phone" />
+          </label>
+          <label> Skills:
+              <input type="text" ng-model="skills" />
+          </label>
+          <label class="label-radio recommend">Do you recommend?</label>
+          <label class="label-radio"> Yes <input type="radio" ng-model="recommend" value="true" ng-checked="true"></label>
+          <label class="label-radio"> No <input type="radio" ng-model="recommend" value="false"></label>
+          <button ng-click="rate()">Rate</button>
+        </div>
+    </main>
+</section>
+
 <section id="index" ng-controller="MainController">
     <header>
         <div class="row">
@@ -41,27 +62,6 @@
             <div class="handyman-item-skills">
                 <span class="handyman-item-skills-desc" ng-repeat="skill in handyman.skills">{{skill}}</span>
             </div>
-        </div>
-    </main>
-</section>
-
-<section id="rate" ng-controller="RatingController">
-    <main id="add-rating">
-        <div class="row">
-          <h1>Rate a Handyman</h1>
-          <label> Handyman's name:
-              <input type="text" ng-model="name" />
-          </label>
-          <label> Phone:
-              <input type="text" ng-model="phone" />
-          </label>
-          <label> Skills:
-              <input type="text" ng-model="skills" />
-          </label>
-          <label class="label-radio recommend">Do you recommend?</label>
-          <label class="label-radio"> Yes <input type="radio" ng-model="recommend" value="true" ng-checked="true"></label>
-          <label class="label-radio"> No <input type="radio" ng-model="recommend" value="false"></label>
-          <button ng-click="rate()">Rate</button>
         </div>
     </main>
 </section>
