@@ -1,10 +1,10 @@
 var app = angular.module('mr-handyman', []);
 
-app.controller('MainController', ['$scope', '$http', function($scope, $http) {
+app.controller('MainController', ['$scope', '$http', 'HandymanService', function($scope, $http, HandymanService) {
   $scope.search = function() {
     var queryFilter = $scope.queryFilter || "";
 
-    $http.get('/handymans?filter='+queryFilter).then(function(response) {
+    HandymanService.allHandymans(queryFilter).then(function(response) {
       $scope.handymanList = response.data;
     });
   }
@@ -12,16 +12,30 @@ app.controller('MainController', ['$scope', '$http', function($scope, $http) {
   $scope.search();
 }]);
 
-app.controller('RatingController', ['$scope', '$http', function($scope, $http) {
+app.controller('RatingController', ['$scope', '$http', 'HandymanService', function($scope, $http, HandymanService) {
   $scope.rate = function() {
     var data = {
       name: $scope.name,
       phone: $scope.phone,
       skills: $scope.skills,
       recommend: $scope.recommend
-    }
+    };
 
-    $http.post('/rating', data).then(function(response) {
+    HandymanService.addRating(data).then(function(response) {
+      // Add a new rating!
     });
   }
 }]);
+
+app.service('HandymanService', function($http) {
+  return {
+    allHandymans: function(query) {
+      var url = '/handymans?filter='+query;
+      return $http.get(url);
+    },
+    addRating: function(data) {
+      var url = '/rating';
+      return $http.post(url, data);
+    }
+  };
+});
