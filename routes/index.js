@@ -14,7 +14,7 @@ router.get('/handymans', function(req, res, next) {
 
 router.post('/rating', function(req, res) {
   var newRating = {
-    recommend: req.params.recommend,
+    recommend: req.params.recommend === 'true' ? true : false,
     handyman: {
       name: req.params.name,
       phone: req.params.phone
