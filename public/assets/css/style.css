@@ -594,6 +594,7 @@ header input::-moz-placeholder { text-transform: uppercase; }
   text-align: center;
   color: #5b5b5b;
   background: #8de0ed;
+  border-radius: 5px;
 }
 
 /*==== Rating ====*/
@@ -654,7 +655,10 @@ header input::-moz-placeholder { text-transform: uppercase; }
   border: 1px solid #e7e7e7;
   box-sizing: border-box;
   border-radius: 5px;
+  transition: background 0.2s ease-out;
 }
+
+#add-rating label input:focus { background: #E4E4E4; }
 
 #add-rating button {
   float: right;
