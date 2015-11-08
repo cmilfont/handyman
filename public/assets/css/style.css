@@ -552,7 +552,7 @@ header input::-moz-placeholder { text-transform: uppercase; }
   width: 65%;
   font-weight: normal;
   font-size: 20px;
-  color: #757575;
+  color: #1eacc3;
   box-sizing: border-box;
 }
 
@@ -569,12 +569,12 @@ header input::-moz-placeholder { text-transform: uppercase; }
 }
 
 .handyman-item .handyman-item-skills .handyman-item-skills-desc {
-  padding: 0 2px;
+  padding: 1px 2px;
   margin: 0 0 0 2%;
   font-size: 13px;
-  border: 1px solid #cecece;
-  color: #757575;
-  background: #f1f1f1;
+  border: 1px solid #E2E2E2;
+  color: #909090;
+  background: #F7F7F7;
   border-radius: 5px;
 }
 
